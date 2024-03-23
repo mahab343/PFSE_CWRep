@@ -2,7 +2,8 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
+#HJSS Started
+#HJSS classes
 ### Eclipse ###
 .apt_generated
 .classpath
