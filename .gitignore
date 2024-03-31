@@ -4,7 +4,7 @@ out/
 !**/src/test/**/out/
 #HJSS Started
 #HJSS classes
-#HJSS booking class
+#HJSS main class
 ### Eclipse ###
 .apt_generated
 .classpath
