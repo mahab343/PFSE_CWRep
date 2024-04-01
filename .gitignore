@@ -5,7 +5,8 @@ out/
 #HJSS Started
 #HJSS classes
 #HJSS main class
-#HJSS booking class
+#HJSS lesson booking class
+#HJSS Cancel/Change Booking
 ### Eclipse ###
 .apt_generated
 .classpath
