@@ -13,6 +13,7 @@ out/
 #HJSS Coach Report
 #HJSS new learner
 #HJSS Refactoring
+#HJSS Added Unit Testing
 ### Eclipse ###
 .apt_generated
 .classpath
