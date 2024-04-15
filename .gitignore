@@ -14,6 +14,7 @@ out/
 #HJSS new learner
 #HJSS Refactoring
 #HJSS Added Unit Testing
+#HJSS Bugs fixing
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -39,3 +40,4 @@ bin/
 ### Mac OS ###
 .DS_Store
 
+/HJSS/target/
