@@ -7,9 +7,8 @@ import java.util.HashMap;
 public class BookSwimmingLesson {
     private static final String[] GRADE_LEVELS = {"1", "2", "3", "4", "5"};
     private static final String[] DAYS = {"Monday", "Wednesday", "Friday", "Saturday"};
-    private static final String[] COACHES = {"John", "Sarah", "Jacksparrow","Alina"};
+    private static final String[] COACHES = {"John", "Sarah", "Jacksparrow"};
     private static final String[] TIME = {"4-5pm", "5-6pm", "6-7pm"};
-//    private static final String[] COACHES = {"Coach_Gohar", "Coach_Sajid", "Coach_Aashar", "Coach_Furqan"};
     private static final int LESSON_VACANCY_LIMIT = 4;
     private static final int LESSONS_PER_WEEKDAY = 3;
     private static final int LESSONS_ON_SATURDAY = 2;
@@ -66,6 +65,9 @@ public class BookSwimmingLesson {
                     String coach = COACHES[lessonIndex % COACHES.length];
                     String time = TIME[lessonIndex];
                     String date = (week * 7 + dayIndex + 1) +"-04-2024" ;
+                    
+//                    String lessonName = "Lesson" + (lessonIndex + 1);
+//                    timetable[week][dayIndex][lessonIndex] = new String[]{date, lessonName, coach, time};
              
                     String lessonName = "Grade" + (dayIndex + 1) + "_&&_Lesson" + (lessonIndex + 1);
                     timetable[week][dayIndex][lessonIndex] = new String[]{date, lessonName, coach, time};
@@ -95,10 +97,12 @@ public class BookSwimmingLesson {
 
     private void initializeLearners() {
         Random rand = new Random();
-        String[] maleNames = {"James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Charles", "Thomas"};
-        String[] femaleNames = {"Mary", "Patricia", "Linda", "Barbara", "Elizabeth", "Jennifer", "Maria", "Susan", "Margaret", "Dorothy"};
+        String[] maleNames = {"Liam Smith","Olivia Williams","Noah Brown","Ava Jones",
+        		"William Davis","Sophia Taylor","Jennifer","James Wilson","Isabella Gray",
+        		"Dorothy","Oliver Anderson"};
+        String[] femaleNames = {"Alina","Rose", "Patricia","Maria", "Susan"};
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 25; i++) {
             String name;
             String gender;
             if (rand.nextBoolean()) {
@@ -118,6 +122,7 @@ public class BookSwimmingLesson {
                     for (int lessonIndex = 0; lessonIndex < timetable[week][dayIndex].length; lessonIndex++) {
                         if (Math.random() < 0.3) {
                             String[] lessonData = timetable[week][dayIndex][lessonIndex];
+//                            bookLesson(name, lessonData[0], lessonData[1], lessonData[2], lessonData[3], week, dayIndex, lessonIndex);
                             bookLesson(name, lessonData[0], lessonData[1], lessonData[2], lessonData[3], week, dayIndex, lessonIndex);
                         }
                     }
@@ -217,6 +222,7 @@ public class BookSwimmingLesson {
         String[] lessonData = {date, lesson, grade, name, coach, time}; // Create array of strings
         bookedLessons.add(lessonData); // Add array of strings to bookedLessons
         vacancies[week][dayIndex][lessonIndex]--;
+        
     }
 
     private void bookLessonByDay(String day) {
