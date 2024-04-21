@@ -3,10 +3,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Change_Cancel_BookingTest {
+class Attend_Review_Rating_LessonTest {
 
     @Test
-    void cancelBooking() {
-    	
+    void attendLesson() {
     }
 }

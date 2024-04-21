@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to Hatfield Junior Swimming School System!");
-        BookSwimmingLesson bookSwimmingLesson = new BookSwimmingLesson();
-        Learner learner = new Learner();
-        Report report = new Report(bookSwimmingLesson);
+        LessonBooking bookSwimmingLesson = new LessonBooking();
+        Add_New_Learner learner = new Add_New_Learner();
+        Print_Learner_Coach_Report report = new Print_Learner_Coach_Report(bookSwimmingLesson);
         while (true) {
         	System.out.println("\n Please Select the Below Option");
             System.out.println("\033[1m \n Please Select the Below Option  \033[0m");
@@ -75,7 +75,7 @@ public class Main {
                     break;
                 case 3:
                     // Attend a swimming lesson
-                    AttendLesson attendLesson = new AttendLesson(bookSwimmingLesson);
+                    Attend_Review_Rating_Lesson attendLesson = new Attend_Review_Rating_Lesson(bookSwimmingLesson);
                     attendLesson.attendLesson();
                     break;
                 case 4:

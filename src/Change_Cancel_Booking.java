@@ -2,9 +2,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Change_Cancel_Booking {
-    private BookSwimmingLesson swimmingLesson;
+    private LessonBooking swimmingLesson;
 
-    public Change_Cancel_Booking(BookSwimmingLesson swimmingLesson) {
+    public Change_Cancel_Booking(LessonBooking swimmingLesson) {
         this.swimmingLesson = swimmingLesson;
     }
 
